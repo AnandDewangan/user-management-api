@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://AnandDewangan:6fajLEe9fcG21kxg@cluster0.bwp7bfv.mongodb.net/userManagement", {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
